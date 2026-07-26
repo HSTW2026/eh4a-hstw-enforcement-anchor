@@ -1,0 +1,32 @@
+name: Anchor Integrity
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  anchor-integrity:
+    name: anchor-integrity
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate anchors and append-only history
+        env:
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          GITHUB_BASE_REF: ${{ github.base_ref }}
+          GITHUB_BEFORE: ${{ github.event.before }}
+        run: python3 tools/check_anchor_repo.py
+
+      - name: Run guard regression tests
+        run: python3 tools/test_anchor_guard.py
