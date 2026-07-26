@@ -8,7 +8,7 @@
   "deliverables": [
     {
       "id": "DELIVERABLE-001",
-      "path": "deliverables/REPLACE",
+      "path": "release/REPLACE_TASK_ID/REPLACE",
       "sha256": "REPLACE_WITH_64_CHARACTER_SHA256"
     }
   ]

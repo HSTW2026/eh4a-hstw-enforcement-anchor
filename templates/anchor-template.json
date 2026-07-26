@@ -2,21 +2,21 @@
   "schema_version": "3.0",
   "anchor_id": "REPLACE_WITH_ANONYMOUS_TASK_ID",
   "rules": {
-    "path": "REPLACE_WITH_RELEASE_RELATIVE_PATH",
+    "path": "control/REPLACE_TASK_ID/rules.txt",
     "sha256": "REPLACE_WITH_64_CHARACTER_SHA256"
   },
   "roadmap": {
-    "path": "REPLACE_WITH_RELEASE_RELATIVE_PATH",
+    "path": "control/REPLACE_TASK_ID/roadmap.txt",
     "sha256": "REPLACE_WITH_64_CHARACTER_SHA256"
   },
   "manifest": {
-    "path": "REPLACE_WITH_RELEASE_RELATIVE_PATH",
+    "path": "control/REPLACE_TASK_ID/manifest.txt",
     "sha256": "REPLACE_WITH_64_CHARACTER_SHA256"
   },
   "deliverable_contracts": [
     {
       "id": "DELIVERABLE-001",
-      "path": "deliverables/REPLACE",
+      "path": "release/REPLACE_TASK_ID/REPLACE.pdf",
       "type": "PDF",
       "expected_filename": "REPLACE.pdf",
       "expected_page_count": 1,
@@ -29,22 +29,22 @@
   "trial": null,
   "ledger_heads": {
     "decisions": {
-      "path": "ledgers/decisions.jsonl",
+      "path": "ledgers/REPLACE_TASK_ID/decisions.jsonl",
       "sha256": "REPLACE_WITH_64_CHARACTER_SHA256",
       "head_hash": "REPLACE_WITH_64_CHARACTER_SHA256"
     },
     "attempts": {
-      "path": "ledgers/attempts.jsonl",
+      "path": "ledgers/REPLACE_TASK_ID/attempts.jsonl",
       "sha256": "REPLACE_WITH_64_CHARACTER_SHA256",
       "head_hash": "REPLACE_WITH_64_CHARACTER_SHA256"
     },
     "failures": {
-      "path": "ledgers/failures.jsonl",
+      "path": "ledgers/REPLACE_TASK_ID/failures.jsonl",
       "sha256": "REPLACE_WITH_64_CHARACTER_SHA256",
       "head_hash": "REPLACE_WITH_64_CHARACTER_SHA256"
     },
     "outputs": {
-      "path": "ledgers/outputs.jsonl",
+      "path": "ledgers/REPLACE_TASK_ID/outputs.jsonl",
       "sha256": "REPLACE_WITH_64_CHARACTER_SHA256",
       "head_hash": "REPLACE_WITH_64_CHARACTER_SHA256"
     }
