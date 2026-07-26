@@ -1,0 +1,52 @@
+{
+  "schema_version": "3.0",
+  "anchor_id": "REPLACE_WITH_ANONYMOUS_TASK_ID",
+  "rules": {
+    "path": "REPLACE_WITH_RELEASE_RELATIVE_PATH",
+    "sha256": "REPLACE_WITH_64_CHARACTER_SHA256"
+  },
+  "roadmap": {
+    "path": "REPLACE_WITH_RELEASE_RELATIVE_PATH",
+    "sha256": "REPLACE_WITH_64_CHARACTER_SHA256"
+  },
+  "manifest": {
+    "path": "REPLACE_WITH_RELEASE_RELATIVE_PATH",
+    "sha256": "REPLACE_WITH_64_CHARACTER_SHA256"
+  },
+  "deliverable_contracts": [
+    {
+      "id": "DELIVERABLE-001",
+      "path": "deliverables/REPLACE",
+      "type": "PDF",
+      "expected_filename": "REPLACE.pdf",
+      "expected_page_count": 1,
+      "min_body_font_pt": 14
+    }
+  ],
+  "inspection_receipts": [],
+  "response_required": true,
+  "permissions_policy": "DENY_UNSIGNED",
+  "trial": null,
+  "ledger_heads": {
+    "decisions": {
+      "path": "ledgers/decisions.jsonl",
+      "sha256": "REPLACE_WITH_64_CHARACTER_SHA256",
+      "head_hash": "REPLACE_WITH_64_CHARACTER_SHA256"
+    },
+    "attempts": {
+      "path": "ledgers/attempts.jsonl",
+      "sha256": "REPLACE_WITH_64_CHARACTER_SHA256",
+      "head_hash": "REPLACE_WITH_64_CHARACTER_SHA256"
+    },
+    "failures": {
+      "path": "ledgers/failures.jsonl",
+      "sha256": "REPLACE_WITH_64_CHARACTER_SHA256",
+      "head_hash": "REPLACE_WITH_64_CHARACTER_SHA256"
+    },
+    "outputs": {
+      "path": "ledgers/outputs.jsonl",
+      "sha256": "REPLACE_WITH_64_CHARACTER_SHA256",
+      "head_hash": "REPLACE_WITH_64_CHARACTER_SHA256"
+    }
+  }
+}

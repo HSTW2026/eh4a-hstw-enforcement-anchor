@@ -1,0 +1,15 @@
+{
+  "certificate_version": "3.0",
+  "result": "DELIVERED",
+  "record_sha256": "REPLACE_WITH_64_CHARACTER_SHA256",
+  "external_anchor_sha256": "REPLACE_WITH_64_CHARACTER_SHA256",
+  "v2_validator_sha256": "REPLACE_WITH_64_CHARACTER_SHA256",
+  "v3_validator_sha256": "REPLACE_WITH_64_CHARACTER_SHA256",
+  "deliverables": [
+    {
+      "id": "DELIVERABLE-001",
+      "path": "deliverables/REPLACE",
+      "sha256": "REPLACE_WITH_64_CHARACTER_SHA256"
+    }
+  ]
+}
