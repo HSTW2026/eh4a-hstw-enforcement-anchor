@@ -1,0 +1,50 @@
+name: Verified Release Gate
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  detect_release:
+    name: detect-release
+    runs-on: ubuntu-latest
+    outputs:
+      required: ${{ steps.changes.outputs.required }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect release evidence
+        id: changes
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          git fetch --no-tags origin "$BASE_REF"
+          if git diff --name-only "origin/$BASE_REF...HEAD" | grep -Eq '^(certificates|release)/'; then
+            echo "required=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "required=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  verified-release:
+    name: verified-release-gate
+    needs: detect_release
+    if: needs.detect_release.outputs.required == 'true'
+    runs-on: ubuntu-latest
+    environment: verified-release
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify release evidence
+        env:
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          GITHUB_BASE_REF: ${{ github.base_ref }}
+        run: python3 tools/check_anchor_repo.py
