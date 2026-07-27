@@ -1,0 +1,20 @@
+{
+  "claim_id": "REPLACE-WITH-UNIQUE-ID",
+  "subject": "prompts/example.txt",
+  "subject_sha256": "REPLACE-WITH-64-CHARACTER-SHA256",
+  "claim_text": "Describe only what was actually executed and evidenced.",
+  "status": "REVIEWED_NOT_EXECUTED",
+  "method": "Describe the exact method used.",
+  "environment": "Identify the exact environment.",
+  "executed_at_utc": "1970-01-01T00:00:00Z",
+  "result": "NOT_EXECUTED",
+  "evidence": [
+    {
+      "path": "evidence/example.txt",
+      "sha256": "REPLACE-WITH-64-CHARACTER-SHA256"
+    }
+  ],
+  "limitations": [
+    "Replace this placeholder with the actual limitations."
+  ]
+}
