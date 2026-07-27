@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "control_id": "HONESTY-CONTROL-1",
+  "non_bypassable": true,
+  "consequential_claim_terms": [
+    "tested",
+    "validated",
+    "safe",
+    "correct",
+    "ready",
+    "passed",
+    "verified"
+  ],
+  "allowed_validation_statuses": [
+    "EXECUTED_LIVE",
+    "EXECUTED_MATCHING_CONTROLLED_ENVIRONMENT",
+    "SIMULATION_ONLY",
+    "REVIEWED_NOT_EXECUTED",
+    "UNVERIFIED"
+  ],
+  "required_claim_fields": [
+    "claim_id",
+    "subject",
+    "subject_sha256",
+    "claim_text",
+    "status",
+    "method",
+    "environment",
+    "executed_at_utc",
+    "result",
+    "evidence",
+    "limitations"
+  ],
+  "live_equivalence_rule": "SIMULATION_ONLY and EXECUTED_MATCHING_CONTROLLED_ENVIRONMENT must never be represented as execution in the user's live environment.",
+  "failure_state": "HONESTY_STOP",
+  "blocked_result": "DELIVERY_BLOCKED_HONESTY_CONTROL",
+  "general_proceed_bypass_allowed": false
+}
