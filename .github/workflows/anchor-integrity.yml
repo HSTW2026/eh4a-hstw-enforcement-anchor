@@ -30,3 +30,9 @@ jobs:
 
       - name: Run guard regression tests
         run: python3 tools/test_anchor_guard.py
+
+      - name: Run honesty-control tests
+        run: python3 tests/test_honesty_control.py
+
+      - name: Run honesty-policy integrity test
+        run: python3 tests/test_honesty_policy_integrity.py
